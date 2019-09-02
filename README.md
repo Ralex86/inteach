@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Architecture / Backend
 
-## Available Scripts
+Vous intégrez une équipe produit qui a pour objectif de sortir une plateforme SaaS de création de modules de révision. Dans cette optique, vous êtes en charge de définir l’architecture logicielle qui devra supporter les contraintes suivantes:
+- Cette plateforme sera utilisée par plusieurs clients. Chaque client aura ses propres utilisateurs et chacun de ces utilisateurs pourra avoir un de ces trois rôles : Admin / Formateur / Apprenant.
+- Un module de révision sera composé de X leçons, et chaque leçon sera composée de X cartes.
+- Les leçons peuvent avoir différents types : Leçon classique ou Évaluation
+- Cette plateforme devra être « scalable » car vous en faites la promo depuis quelque temps déjà et vous vous attendez à avoir un gros pic de connexion à l’ouverture.
+- Cette plateforme devra disposer d’une API car par la suite il est envisagé de faire des applications mobiles􏰀
+Pour pouvoir parler de l’architecture que vous avez pensé, il faut produire les documents suivants:
+- Un diagramme d’entités
+- Un diagramme d’architecture avec les différentes briques nécessaires
+- Un descriptif des technologies utilisées (infra / back / front) avec une explication de vos choix. A vous d’être assez exhaustif sur les conséquences de vos choix techniques.
 
-In the project directory, you can run:
+#### Partie bonus SQL :
+Avec le dump ci-joint montrer comment :
+- Récupérer la liste des groupes n’ayant pas d’utilisateurs
+- Afficher les utilisateurs avec leurs groupes :
+- bonus 1: on voudrait tous les groupes de l’utilisateur dans une seule colonne
+- bonus 2: récupérer uniquement les emails commençant par 6 lettres et suivi d’un
+ou plusieurs chiffres.
+- Retourner la liste des cours publiés, en français qui ont au moins 1 utilisateurs.
 
-### `npm start`
+### FrontEnd
+Développer une petite application web (en JS) pour proposer aux utilisateurs une interface de gestion de modules de formation. Les contraintes sont les suivantes:
+- Charger les données depuis une fixture (au moins 5 modules)
+- Afficher les modules
+- Avoir la possibilité d’ajouter / éditer / supprimer un module
+- Si vous souhaitez apporter une touche d’esthétisme à l’ensemble, c’est encore mieux.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Bonus 1 : Utiliser React Bonus 2 : Utiliser Redux Bonus 3 : Utiliser Redux-Saga
